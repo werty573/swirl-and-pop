@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Swirl &amp; Pop | Event Treat Carts, Trinidad</title>
+<meta name="description" content="Soft serve, slushy, snow cone, popcorn, cotton candy and hot dog machine rentals for parties and events across Trinidad. Concept site by Portside Digital.">
+<meta name="theme-color" content="#FFF4E6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M20 34h24L32 62z' fill='%23F2B266' stroke='%232B1838' stroke-width='3' stroke-linejoin='round'/%3E%3Cpath d='M16 34c0-6 4-9 8-9-1-6 4-11 8-11s9 5 8 11c4 0 8 3 8 9z' fill='%23FF7AAE' stroke='%232B1838' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <a href="#top" class="brand" aria-label="Swirl and Pop home">
+    <svg viewBox="0 0 64 64" class="brand-mark" aria-hidden="true">
+      <path d="M20 34h24L32 61z" fill="#F2B266" stroke="#2B1838" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M24 40l10 0M26 46l8 0" stroke="#2B1838" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+      <path d="M15 34c0-6 4-9 8-9-1-6 4-11 9-11s10 5 9 11c4 0 8 3 8 9z" fill="#FF7AAE" stroke="#2B1838" stroke-width="3.5" stroke-linejoin="round"/>
+      <circle cx="32" cy="10" r="4" fill="#E8364F" stroke="#2B1838" stroke-width="3"/>
+    </svg>
+    <span>Swirl <em>&amp;</em> Pop</span>
+  </a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="#treats">Treats</a>
+    <a href="#how">How it works</a>
+    <a href="#events">Events</a>
+    <a href="#shop">Shop</a>
+    <a href="#faq">FAQs</a>
+  </nav>
+  <a href="#build" class="btn btn-ink btn-sm">Build my party <i class="ph-bold ph-arrow-right"></i></a>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="sunburst" aria-hidden="true"></div>
+  <canvas id="pops" aria-hidden="true"></canvas>
+
+  <div class="hero-copy">
+    <p class="kicker"><span class="dot"></span> Booking now for the Christmas season</p>
+    <h1 class="hero-title">
+      <span class="line"><span>Your party's</span></span>
+      <span class="line"><span>sweetest</span></span>
+      <span class="line"><span class="pink">guest</span> <span class="small-script">has wheels.</span></span>
+    </h1>
+    <p class="hero-sub">Soft serve, slushies, snow cones, popcorn, cotton candy and hot dogs. Machine, ingredients and delivery, sorted, anywhere in Trinidad.</p>
+    <div class="hero-ctas">
+      <a href="#build" class="btn btn-pink">Build my package <i class="ph-bold ph-sparkle"></i></a>
+      <a href="#treats" class="btn btn-ghost">See prices</a>
+    </div>
+    <ul class="hero-facts">
+      <li><b data-count="6">6</b><span>treat machines</span></li>
+      <li><b>50–1000<sup>+</sup></b><span>guests catered</span></li>
+      <li><b data-count="850" data-prefix="$">$850</b><span>party starter from</span></li>
+    </ul>
+  </div>
+
+  <div class="hero-stage">
+    <figure class="bubble b1"><img src="img/softserve-sky.jpg" alt="Soft serve cone against a blue sky"></figure>
+    <figure class="bubble b2"><img src="img/cottoncandy.jpg" alt="Pink cotton candy on a stick"></figure>
+    <figure class="bubble b3"><img src="img/snowcone-blue.jpg" alt="Blue snow cone in a paper cup"></figure>
+
+    <svg class="cart" id="cart" viewBox="0 0 420 440" role="img" aria-label="Illustrated treat cart with a striped awning">
+      <defs>
+        <clipPath id="roofClip"><path d="M48 70 Q210 30 372 70 L398 140 L22 140 Z"/></clipPath>
+        <clipPath id="glassClip"><rect x="262" y="176" width="78" height="66" rx="6"/></clipPath>
+      </defs>
+      <!-- poles -->
+      <g class="poles">
+        <rect x="58" y="134" width="10" height="122" rx="5" fill="#fff" stroke="#2B1838" stroke-width="4"/>
+        <rect x="352" y="134" width="10" height="122" rx="5" fill="#fff" stroke="#2B1838" stroke-width="4"/>
+      </g>
+      <!-- machines on counter -->
+      <g class="kit">
+        <!-- soft serve machine -->
+        <rect x="82" y="168" width="78" height="88" rx="10" fill="#E9EEF2" stroke="#2B1838" stroke-width="4"/>
+        <rect x="92" y="180" width="58" height="16" rx="5" fill="#A8E6DD" stroke="#2B1838" stroke-width="3"/>
+        <rect x="104" y="204" width="8" height="18" rx="3" fill="#2B1838"/>
+        <rect x="130" y="204" width="8" height="18" rx="3" fill="#2B1838"/>
+        <path d="M100 236 h42" stroke="#2B1838" stroke-width="3" stroke-linecap="round"/>
+        <!-- cone on counter -->
+        <g class="mini-cone">
+          <path d="M190 214 h24 l-12 40z" fill="#F2B266" stroke="#2B1838" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M186 214c0-6 4-9 8-9-1-6 4-10 8-10s9 4 8 10c4 0 8 3 8 9z" fill="#FF7AAE" stroke="#2B1838" stroke-width="4" stroke-linejoin="round"/>
+        </g>
+        <!-- popcorn kettle -->
+        <g id="kettle">
+          <rect x="254" y="166" width="94" height="90" rx="10" fill="#E8364F" stroke="#2B1838" stroke-width="4"/>
+          <rect x="262" y="176" width="78" height="66" rx="6" fill="#FFF4E6" stroke="#2B1838" stroke-width="3"/>
+          <g clip-path="url(#glassClip)" class="kernels">
+            <circle cx="272" cy="236" r="9" fill="#FFE59A"/><circle cx="288" cy="232" r="10" fill="#FFF7D6"/>
+            <circle cx="305" cy="236" r="9" fill="#FFE59A"/><circle cx="322" cy="233" r="10" fill="#FFF7D6"/>
+            <circle cx="336" cy="237" r="8" fill="#FFE59A"/><circle cx="280" cy="222" r="8" fill="#FFF7D6"/>
+            <circle cx="298" cy="220" r="9" fill="#FFE59A"/><circle cx="316" cy="221" r="8" fill="#FFF7D6"/>
+            <circle cx="331" cy="223" r="7" fill="#FFE59A"/>
+          </g>
+          <path d="M268 184 l12 -2" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+        </g>
+      </g>
+      <!-- awning -->
+      <g class="awning" id="awning">
+        <g clip-path="url(#roofClip)">
+          <rect x="0" y="20" width="420" height="130" fill="#FFF4E6"/>
+          <g class="stripes">
+            <path d="M48 70 L22 140 L64 140 L82 62 Z" fill="#FF7AAE"/>
+            <path d="M118 52 L106 140 L148 140 L152 46 Z" fill="#FF7AAE"/>
+            <path d="M190 42 L190 140 L232 140 L228 42 Z" fill="#FF7AAE"/>
+            <path d="M268 46 L272 140 L314 140 L302 52 Z" fill="#FF7AAE"/>
+            <path d="M338 62 L356 140 L398 140 L372 70 Z" fill="#FF7AAE"/>
+          </g>
+        </g>
+        <path d="M48 70 Q210 30 372 70 L398 140 L22 140 Z" fill="none" stroke="#2B1838" stroke-width="4" stroke-linejoin="round"/>
+        <g class="scallops" stroke="#2B1838" stroke-width="4">
+          <path d="M22 140 a21 21 0 0 0 42 0" fill="#FF7AAE"/>
+          <path d="M64 140 a21 21 0 0 0 42 0" fill="#A8E6DD"/>
+          <path d="M106 140 a21 21 0 0 0 42 0" fill="#FF7AAE"/>
+          <path d="M148 140 a21 21 0 0 0 42 0" fill="#A8E6DD"/>
+          <path d="M190 140 a21 21 0 0 0 42 0" fill="#FF7AAE"/>
+          <path d="M232 140 a21 21 0 0 0 42 0" fill="#A8E6DD"/>
+          <path d="M274 140 a21 21 0 0 0 42 0" fill="#FF7AAE"/>
+          <path d="M316 140 a21 21 0 0 0 42 0" fill="#A8E6DD"/>
+          <path d="M358 140 a20 21 0 0 0 40 0" fill="#FF7AAE"/>
+        </g>
+        <circle cx="210" cy="34" r="10" fill="#FFD66B" stroke="#2B1838" stroke-width="4"/>
+      </g>
+      <!-- counter + body -->
+      <rect x="30" y="252" width="360" height="18" rx="9" fill="#A8E6DD" stroke="#2B1838" stroke-width="4"/>
+      <rect x="46" y="270" width="328" height="112" rx="16" fill="#fff" stroke="#2B1838" stroke-width="4"/>
+      <rect x="62" y="270" width="296" height="10" fill="#FFD66B" opacity=".55"/>
+      <g class="plate">
+        <rect x="104" y="296" width="212" height="64" rx="32" fill="#2B1838"/>
+        <text x="210" y="338" text-anchor="middle" font-family="Shrikhand, cursive" font-size="28" fill="#FFF4E6">Swirl <tspan fill="#FF7AAE">&amp;</tspan> Pop</text>
+      </g>
+      <!-- wheels -->
+      <g class="wheel" id="wheelL" style="transform-origin:112px 392px">
+        <circle cx="112" cy="392" r="34" fill="#FFD66B" stroke="#2B1838" stroke-width="4"/>
+        <circle cx="112" cy="392" r="9" fill="#2B1838"/>
+        <path d="M112 362v60M82 392h60M91 371l42 42M133 371l-42 42" stroke="#2B1838" stroke-width="3.5"/>
+      </g>
+      <g class="wheel" id="wheelR" style="transform-origin:308px 392px">
+        <circle cx="308" cy="392" r="34" fill="#FFD66B" stroke="#2B1838" stroke-width="4"/>
+        <circle cx="308" cy="392" r="9" fill="#2B1838"/>
+        <path d="M308 362v60M278 392h60M287 371l42 42M329 371l-42 42" stroke="#2B1838" stroke-width="3.5"/>
+      </g>
+    </svg>
+    <div class="cart-shadow" aria-hidden="true"></div>
+    <p class="stage-tag"><i class="ph-fill ph-hand-pointing"></i> Tap the cart</p>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Soft Serve</span><b>✦</b><span>Slushies</span><b>✦</b><span>Snow Cones</span><b>✦</b><span>Popcorn</span><b>✦</b><span>Cotton Candy</span><b>✦</b><span>Hot Dogs</span><b>✦</b>
+    <span>Soft Serve</span><b>✦</b><span>Slushies</span><b>✦</b><span>Snow Cones</span><b>✦</b><span>Popcorn</span><b>✦</b><span>Cotton Candy</span><b>✦</b><span>Hot Dogs</span><b>✦</b>
+  </div>
+</div>
+
+<!-- ============ TREATS ============ -->
+<section class="treats" id="treats">
+  <div class="treats-head">
+    <div>
+      <p class="eyebrow">The menu</p>
+      <h2 class="h2">Six machines.<br><span class="pink">Zero</span> stress.</h2>
+    </div>
+    <div class="mode" role="group" aria-label="Pricing type">
+      <button class="mode-btn is-on" data-mode="ps" aria-pressed="true">Party Starter</button>
+      <button class="mode-btn" data-mode="mo" aria-pressed="false">Machine only</button>
+      <span class="mode-pill" aria-hidden="true"></span>
+    </div>
+    <p class="mode-note" id="modeNote">Machine + ingredients for 50 servings + basic delivery.</p>
+  </div>
+
+  <div class="treats-pin">
+    <div class="treats-track" id="treatsTrack">
+      <!-- cards rendered from data in main.js -->
+    </div>
+  </div>
+  <div class="treats-hint"><i class="ph-bold ph-hand-swipe-right"></i> Swipe the menu</div>
+</section>
+
+<!-- ============ HOW IT WORKS (the swirl) ============ -->
+<section class="how" id="how">
+  <div class="how-pin">
+    <div class="how-steps">
+      <p class="eyebrow light">How it works</p>
+      <ol class="steps">
+        <li class="step is-on"><span class="n">01</span><h3>Pick your treats</h3><p>Choose one machine or build a full treat bar. Tell us your date, guest count and venue.</p></li>
+        <li class="step"><span class="n">02</span><h3>We roll up</h3><p>We deliver, set up and test everything before your first guest walks in.</p></li>
+        <li class="step"><span class="n">03</span><h3>The line forms</h3><p>Serve it yourself, or add one of our friendly attendants to keep it flowing.</p></li>
+        <li class="step"><span class="n">04</span><h3>We pack it away</h3><p>After the last swirl we break down and clean up. You just enjoy the party.</p></li>
+      </ol>
+    </div>
+    <div class="how-art" aria-hidden="true">
+      <svg viewBox="0 0 300 420" class="swirl-svg">
+        <g class="sprinkles"></g>
+        <path class="tier t4" d="M150 62 c-14 0 -22 10 -20 22"/>
+        <path class="tier t3" d="M108 128 c-10 -30 30 -44 42 -44 c22 0 52 18 42 44"/>
+        <path class="tier t2" d="M88 172 c-16 -26 10 -46 62 -46 c50 0 80 18 64 46"/>
+        <path class="tier t1" d="M72 214 c-18 -24 12 -46 78 -46 c70 0 98 20 80 46"/>
+        <path class="cone" d="M76 214 h148 l-74 196z"/>
+        <path class="waffle" d="M96 248 l70 68 M120 222 l78 76 M86 270 l52 50 M204 248 l-70 68 M180 222 l-78 76 M214 270 l-52 50"/>
+      </svg>
+      <div class="how-count"><span id="howNum">01</span>/04</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUILDER ============ -->
+<section class="build" id="build">
+  <div class="build-head">
+    <p class="eyebrow">Party builder</p>
+    <h2 class="h2">Build your treat bar.<br>See the price <span class="pink">instantly.</span></h2>
+    <p class="lede">No waiting on a DM reply to find out what it costs. Pick your treats, set your guest count, and send the whole order to us in one tap.</p>
+  </div>
+
+  <div class="build-grid">
+    <form class="builder" id="builder" onsubmit="return false">
+      <fieldset>
+        <legend><span>1</span> What's the occasion?</legend>
+        <div class="chips" data-single="occasion">
+          <button type="button" class="chip is-on">Birthday</button>
+          <button type="button" class="chip">Wedding</button>
+          <button type="button" class="chip">Corporate</button>
+          <button type="button" class="chip">School / Church</button>
+          <button type="button" class="chip">Something else</button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span>2</span> How many guests?</legend>
+        <div class="guests">
+          <output id="guestOut">50</output><small>guests</small>
+        </div>
+        <input type="range" id="guests" min="25" max="1000" step="25" value="50" aria-label="Number of guests">
+        <div class="range-scale"><span>25</span><span>250</span><span>500</span><span>750</span><span>1000+</span></div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span>3</span> Pick your treats</legend>
+        <div class="machine-chips" id="machineChips"></div>
+      </fieldset>
+
+      <fieldset class="row2">
+        <label class="field">
+          <span>Event date</span>
+          <input type="date" id="date">
+        </label>
+        <label class="field">
+          <span>Area</span>
+          <select id="area">
+            <option>Port of Spain &amp; environs</option>
+            <option>Diego Martin / West</option>
+            <option>East (Arima, Tunapuna)</option>
+            <option>Central (Chaguanas)</option>
+            <option>South (San Fernando)</option>
+            <option>Deep South / Far East</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <label class="toggle">
+        <input type="checkbox" id="staff">
+        <span class="sw" aria-hidden="true"></span>
+        <span>Add an attendant to serve your guests <em>(quoted)</em></span>
+      </label>
+    </form>
+
+    <aside class="receipt-wrap" aria-live="polite">
+      <div class="receipt" id="receipt">
+        <div class="r-top">
+          <strong>Swirl &amp; Pop</strong>
+          <span>Estimate · <span id="rDate">date TBC</span></span>
+        </div>
+        <div class="r-meta"><span id="rOcc">Birthday</span><span><span id="rGuests">50</span> guests</span></div>
+        <ul class="r-lines" id="rLines"></ul>
+        <div class="r-total"><span>Estimate from</span><b>TT$<span id="rTotal">0</span></b></div>
+        <p class="r-note" id="rNote">Delivery outside the basic zone runs $150–$800 depending on location. Ask about multi-machine discounts.</p>
+        <div class="r-barcode" aria-hidden="true"></div>
+      </div>
+      <button class="btn btn-wa" id="sendWa" type="button"><i class="ph-fill ph-whatsapp-logo"></i> Send this order on WhatsApp</button>
+      <p class="r-small">Opens WhatsApp with your order already typed out.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ EVENTS ============ -->
+<section class="events" id="events">
+  <div class="events-head">
+    <p class="eyebrow">Made for every lime</p>
+    <h2 class="h2">From first birthdays<br>to <span class="pink">first dances.</span></h2>
+  </div>
+
+  <div class="stack">
+    <article class="ev" style="--c:#FF7AAE">
+      <div class="ev-img"><img src="img/birthday.jpg" alt="Children blowing out candles on a birthday cake" loading="lazy"></div>
+      <div class="ev-body">
+        <span class="ev-n">01</span>
+        <h3>Birthdays</h3>
+        <p>Cotton candy for the little ones, snow cones for the big ones. The treat cart becomes the party's main attraction.</p>
+        <ul class="tags"><li>Cotton candy</li><li>Snow cones</li><li>Popcorn</li></ul>
+      </div>
+    </article>
+    <article class="ev" style="--c:#A8E6DD">
+      <div class="ev-img"><img src="img/wedding.jpg" alt="Couple dancing at a wedding reception" loading="lazy"></div>
+      <div class="ev-body">
+        <span class="ev-n">02</span>
+        <h3>Weddings</h3>
+        <p>A soft-serve station dressed to match your décor. Late-night swirls keep the dance floor going.</p>
+        <ul class="tags"><li>Soft serve</li><li>Custom flavours</li><li>Attendant</li></ul>
+      </div>
+    </article>
+    <article class="ev" style="--c:#FFD66B">
+      <div class="ev-img"><img src="img/corporate.jpg" alt="Office team celebrating together" loading="lazy"></div>
+      <div class="ev-body">
+        <span class="ev-n">03</span>
+        <h3>Corporate &amp; staff days</h3>
+        <p>Family days, launches and office Christmas parties. One invoice, multiple machines, served for hundreds.</p>
+        <ul class="tags"><li>Treat bar</li><li>1000+ guests</li><li>Invoicing</li></ul>
+      </div>
+    </article>
+    <article class="ev" style="--c:#8FB8FF">
+      <div class="ev-img"><img src="img/fair.jpg" alt="Colourful popcorn and candy stand at a fair" loading="lazy"></div>
+      <div class="ev-body">
+        <span class="ev-n">04</span>
+        <h3>School fairs &amp; fundraisers</h3>
+        <p>Children's Christmas parties, sports days and church bazaars. Easy to run and they raise money fast.</p>
+        <ul class="tags"><li>Slushies</li><li>Hot dogs</li><li>Popcorn</li></ul>
+      </div>
+    </article>
+    <article class="ev" style="--c:#C9A8FF">
+      <div class="ev-img"><img src="img/reveal.jpg" alt="Gender reveal party with pink confetti" loading="lazy"></div>
+      <div class="ev-body">
+        <span class="ev-n">05</span>
+        <h3>Reveals, showers &amp; brunches</h3>
+        <p>Pink or blue cotton candy, pastel slushies and a cart that looks great in every photo.</p>
+        <ul class="tags"><li>Colour-matched</li><li>Cotton candy</li><li>Slushies</li></ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SHOP ============ -->
+<section class="shop" id="shop">
+  <div class="shop-head">
+    <p class="eyebrow">Take the swirl home</p>
+    <h2 class="h2">Soft-serve mix, <span class="pink">by the bag.</span></h2>
+    <p class="lede">The same mixes we use at events, for cafés, food trucks and home machines.</p>
+  </div>
+  <div class="flavours">
+    <article class="flv" style="--a:#FFE08A;--b:#FF7AAE">
+      <div class="flv-art"><span class="scoop"></span><span class="sprk"></span></div>
+      <h3>Birthday Cake</h3>
+      <p>Vanilla cake and sprinkles</p>
+      <div class="flv-foot"><b>$695</b><button class="add demo" data-msg="Demo: on the live site this adds Birthday Cake mix to your cart.">Add <i class="ph-bold ph-plus"></i></button></div>
+    </article>
+    <article class="flv" style="--a:#FFB3D1;--b:#A8E6DD">
+      <div class="flv-art"><span class="scoop"></span><span class="sprk"></span></div>
+      <h3>Pink Cotton Candy</h3>
+      <p>The flavour of the fair</p>
+      <div class="flv-foot"><b>$695</b><button class="add demo" data-msg="Demo: on the live site this adds Pink Cotton Candy mix to your cart.">Add <i class="ph-bold ph-plus"></i></button></div>
+    </article>
+    <article class="flv" style="--a:#D9A066;--b:#FFD66B">
+      <div class="flv-art"><span class="scoop"></span><span class="sprk"></span></div>
+      <h3>Salted Caramel</h3>
+      <p>Rich, buttery, a pinch of salt</p>
+      <div class="flv-foot"><b>$795</b><button class="add demo" data-msg="Demo: on the live site this adds Salted Caramel mix to your cart.">Add <i class="ph-bold ph-plus"></i></button></div>
+    </article>
+  </div>
+
+  <div class="biz">
+    <img src="img/stand.jpg" alt="Vendor serving at a brightly lit dessert stand" loading="lazy">
+    <div class="biz-copy">
+      <p class="eyebrow light">Start your own treat business</p>
+      <h3>Machines, mixes, carts &amp; trolleys.</h3>
+      <p>Want to run your own stand? We supply the same equipment we use, plus heavy-duty hand carts to move it.</p>
+      <a href="#faq" class="btn btn-pink btn-sm demo" data-msg="Demo: on the live site this opens the equipment catalogue.">Browse equipment <i class="ph-bold ph-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="faq-head">
+    <p class="eyebrow">Rapid-fire FAQs</p>
+    <h2 class="h2">Quick answers.</h2>
+  </div>
+  <div class="qa">
+    <details open>
+      <summary>What's in a Party Starter package?<i class="ph-bold ph-plus"></i></summary>
+      <p>The machine, ingredients for up to 50 servings, and basic delivery. Need more? Extra servings start from $300 per 50.</p>
+    </details>
+    <details>
+      <summary>Can I rent just the machine?<i class="ph-bold ph-plus"></i></summary>
+      <p>Yes. Machine-only rentals include basic setup. Delivery and ingredients are priced separately, from $395 for the hot dog roller.</p>
+    </details>
+    <details>
+      <summary>How big an event can you handle?<i class="ph-bold ph-plus"></i></summary>
+      <p>Anything from 50 to 1000+ guests. For big events we build a custom package with several machines, bulk ingredients and extended setup support.</p>
+    </details>
+    <details>
+      <summary>How much is delivery?<i class="ph-bold ph-plus"></i></summary>
+      <p>Between $150 and $800 depending on location. Tell us your venue in the builder and we'll confirm the exact price.</p>
+    </details>
+    <details>
+      <summary>Do you send someone to serve?<i class="ph-bold ph-plus"></i></summary>
+      <p>On request. Our attendants are an optional add-on, so you can enjoy your own party.</p>
+    </details>
+    <details>
+      <summary>How far ahead should I book?<i class="ph-bold ph-plus"></i></summary>
+      <p>As early as you can, especially from November to January. Weekends fill up fast.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="cta-awning" aria-hidden="true"></div>
+  <h2 class="cta-title"><span>Let's get this</span><span class="big">party</span><span class="big pink">popping.</span></h2>
+  <div class="cta-btns">
+    <a href="#build" class="btn btn-pink">Build my package</a>
+    <button class="btn btn-ghost-light demo" data-msg="Demo: on the live site this calls the business directly."><i class="ph-fill ph-phone"></i> Call us</button>
+    <button class="btn btn-ghost-light demo" data-msg="Demo: on the live site this opens a WhatsApp chat with the business."><i class="ph-fill ph-whatsapp-logo"></i> WhatsApp</button>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-row">
+    <a href="#top" class="brand light"><span>Swirl <em>&amp;</em> Pop</span></a>
+    <p>Event treat carts · Trinidad &amp; Tobago</p>
+    <div class="socials">
+      <button class="demo" data-msg="Demo: links to Instagram on the live site." aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></button>
+      <button class="demo" data-msg="Demo: links to Facebook on the live site." aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></button>
+      <button class="demo" data-msg="Demo: links to TikTok on the live site." aria-label="TikTok"><i class="ph-fill ph-tiktok-logo"></i></button>
+    </div>
+  </div>
+  <p class="foot-small"><b>Swirl &amp; Pop</b> is a fictional business. Concept site designed and built by Portside Digital. Photos from Unsplash.</p>
+</footer>
+
+<!-- mobile dock -->
+<nav class="dock" aria-label="Quick actions">
+  <button class="dock-b demo" data-msg="Demo: on the live site this calls the business directly." aria-label="Call"><i class="ph-fill ph-phone"></i></button>
+  <a href="#build" class="dock-b dock-main">Build my party</a>
+  <button class="dock-b demo" data-msg="Demo: on the live site this opens a WhatsApp chat with the business." aria-label="WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></button>
+</nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<a class="pd-ribbon" href="https://wa.me/18682591409?text=Hi%20Portside%20Digital%2C%20I%20saw%20the%20Swirl%20%26%20Pop%20demo%20and%20want%20a%20site%20like%20it." target="_blank" rel="noopener">Concept site by <b>Portside Digital</b>. Want one like this?</a>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
